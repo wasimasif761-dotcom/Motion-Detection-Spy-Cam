@@ -1,0 +1,9 @@
+{
+  "name": "Motion Detection Spy Cam",
+  "description": "Stealth offline-ready PWA spy camera with real-time motion detection, siren alarms, snapshot evidence capture, and RTL support.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

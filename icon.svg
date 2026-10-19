@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#05080f" />
+      <stop offset="100%" stop-color="#020408" />
+    </linearGradient>
+
+    <!-- Glowing Eye Gradient -->
+    <radialGradient id="lensGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#00b4d8" stop-opacity="0.6" />
+      <stop offset="70%" stop-color="#0f2027" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#050b14" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Ring Gradient -->
+    <linearGradient id="neonRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88" />
+      <stop offset="50%" stop-color="#00b4d8" />
+      <stop offset="100%" stop-color="#7928ca" />
+    </linearGradient>
+
+    <!-- Filter for Glow Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Dark Canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Cyber Target Ring (Radar Lines) -->
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#00b4d8" stroke-width="2.5" stroke-opacity="0.3" stroke-dasharray="14 10" />
+  <circle cx="256" cy="256" r="165" fill="none" stroke="url(#neonRing)" stroke-width="6" filter="url(#glow)" />
+  
+  <!-- Corner Tech HUD Accents -->
+  <path d="M 120 180 L 120 140 L 160 140" fill="none" stroke="#00ff88" stroke-width="5" stroke-linecap="round" />
+  <path d="M 392 180 L 392 140 L 352 140" fill="none" stroke="#00ff88" stroke-width="5" stroke-linecap="round" />
+  <path d="M 120 332 L 120 372 L 160 372" fill="none" stroke="#00ff88" stroke-width="5" stroke-linecap="round" />
+  <path d="M 392 332 L 392 372 L 352 372" fill="none" stroke="#00ff88" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Stylized Security Camera Eye Contour -->
+  <path d="M 100 256 C 145 170, 367 170, 412 256 C 367 342, 145 342, 100 256 Z" 
+        fill="#07131e" stroke="#00b4d8" stroke-width="5" stroke-linejoin="round" />
+
+  <!-- Inner Lens Outer Bezel -->
+  <circle cx="256" cy="256" r="90" fill="url(#lensGlow)" stroke="#00ff88" stroke-width="4.5" />
+
+  <!-- Aperture Tech Blades -->
+  <g stroke="#00ff88" stroke-width="2.5" stroke-opacity="0.5">
+    <line x1="256" y1="170" x2="210" y2="230" />
+    <line x1="335" y1="215" x2="285" y2="210" />
+    <line x1="335" y1="297" x2="310" y2="245" />
+    <line x1="256" y1="342" x2="302" y2="282" />
+    <line x1="177" y1="297" x2="227" y2="302" />
+    <line x1="177" y1="215" x2="202" y2="267" />
+  </g>
+
+  <!-- Central Pupil / Camera Core -->
+  <circle cx="256" cy="256" r="42" fill="#03080e" stroke="#ff3366" stroke-width="4" />
+  <circle cx="256" cy="256" r="16" fill="#ff3366" filter="url(#glow)" />
+
+  <!-- Crosshair Sight Overlay -->
+  <line x1="256" y1="120" x2="256" y2="155" stroke="#ff3366" stroke-width="3" stroke-linecap="round" />
+  <line x1="256" y1="357" x2="256" y2="392" stroke="#ff3366" stroke-width="3" stroke-linecap="round" />
+  <line x1="120" y1="256" x2="155" y2="256" stroke="#ff3366" stroke-width="3" stroke-linecap="round" />
+  <line x1="357" y1="256" x2="392" y2="256" stroke="#ff3366" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Glass Lens Reflection Highlights -->
+  <path d="M 230 200 A 70 70 0 0 1 295 210" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-opacity="0.75" />
+  <circle cx="276" cy="236" r="5" fill="#ffffff" opacity="0.8" />
+</svg>

@@ -1,0 +1,29 @@
+{
+  "id": "./",
+  "name": "Motion Detection Spy Cam",
+  "short_name": "SpyCam",
+  "description": "Stealth motion detection spy camera PWA with real-time motion alerts, siren alarm, and evidence capture gallery.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "dir": "ltr",
+  "lang": "en",
+  "background_color": "#070b12",
+  "theme_color": "#070b12",
+  "categories": ["utilities", "security"],
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "192x192 512x512 any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon.svg",
+      "sizes": "192x192 512x512 any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
